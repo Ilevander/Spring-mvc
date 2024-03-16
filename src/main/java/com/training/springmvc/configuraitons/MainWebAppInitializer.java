@@ -10,6 +10,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+//WebApplicationInitializer to configure the given Servlet as dispatcher =Front Controller (first to receive the HTTP request from client) :
 public class MainWebAppInitializer implements WebApplicationInitializer 
 	{
 		@Override
