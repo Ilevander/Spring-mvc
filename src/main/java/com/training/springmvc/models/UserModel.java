@@ -1,5 +1,8 @@
 package com.training.springmvc.models;
 
+import org.springframework.stereotype.Component;
+
+@Component("user")
 public class UserModel {
 
 	//Attributes
