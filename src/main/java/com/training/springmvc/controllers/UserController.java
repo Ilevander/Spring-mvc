@@ -36,12 +36,15 @@ public class UserController {
 	}
 	
 	
+	//@URL : http://localhost:8080/spring-mvc/test/create-user-wtih-validation
 	@RequestMapping("/user-registration-form-with-validation")
 	public String userReegistrationFormWithValidation(Model model) {
 		model.addAttribute("user", new UserModelValid());
 		return "userRegistrationFormWithValidation";
 	}
 	
+	
+	//@URL : http://localhost:8080/spring-mvc/test/create-user-wtih-validation
 	@RequestMapping("/create-user-wtih-validation")
 	public String createUserWithValidation(@Valid @ModelAttribute("user") UserModelValid u, 
 			BindingResult br) {
