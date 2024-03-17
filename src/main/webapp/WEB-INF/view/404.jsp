@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>hThis resource is not found :( </h1>
+<h1>This resource is not found :( </h1>
 
 </body>
 </html>

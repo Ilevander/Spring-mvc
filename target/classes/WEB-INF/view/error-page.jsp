@@ -8,7 +8,13 @@
 </head>
 <body>
 
-<h1>This resource is not found :( </h1>
-
+<p>This is generic Exception Handler</p>
+	<p>
+		Exception: <b>${exception}</b>
+	</p>
+	<p>
+		Handler: <b> ${handler} </b>
+	</p>
+	
 </body>
 </html>
