@@ -19,12 +19,15 @@ import com.training.springmvc.models.UserModelValid;
 @RequestMapping("/test")
 public class UserController {
 	
+	//@URL : http://localhost:8080/spring-mvc/test/user-registration-form
 	@RequestMapping("/user-registration-form")
 	public String userReegistrationForm(Model model) {
 		model.addAttribute("user", new UserModel());
 		return "userRegistrationForm";
 	}
 	
+	
+	//@URL : http://localhost:8080/spring-mvc/test/create-user
 	@RequestMapping("/create-user")
 	public String createUser(@ModelAttribute("user") UserModel u) {
 		// store user into the database or perform other business valuable operation
