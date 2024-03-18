@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.training.springmvc.models.UserModel;
 
+@Controller
+@RequestMapping("/test")
 public class ExceptionHandlerController {
 
 	@RequestMapping(value = "/user/{email}")
