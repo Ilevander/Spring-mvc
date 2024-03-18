@@ -48,6 +48,8 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import com.training.springmvc.interceptors.DemoHandlerInterceptor;
+
 
 @EnableWebMvc
 @EnableWebSecurity
@@ -99,14 +101,14 @@ public class WebConfig implements WebMvcConfigurer
 		return new CookieLocaleResolver();
 	}
 
-//	@Override
-//	public void addInterceptors(InterceptorRegistry registry) {
-//		registry.addInterceptor(new DemoHandlerInterceptor()).addPathPatterns("/test/simple-model-demo");
-//
-//		LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
-//		localeChangeInterceptor.setParamName("lang");
-//		registry.addInterceptor(localeChangeInterceptor);
-//	}
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(new DemoHandlerInterceptor()).addPathPatterns("/test/simple-model-demo");
+
+		LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
+		localeChangeInterceptor.setParamName("lang");
+		registry.addInterceptor(localeChangeInterceptor);
+	}
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
